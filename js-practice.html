@@ -52,11 +52,38 @@
     console.log(try02);
 
     // Functions on my own
-    function namemaker(firstName, middleName, lastName){
+    function makeName(firstName, middleName, lastName){
       let fullname = `${firstName} “${middleName}” ${lastName}`;
       return fullname;
     }
-    console.log(namemaker("Robert", "Beto", "O'Rourke"))
+    console.log(makeName("Robert", "Beto", "O'Rourke"))
+
+    console.log("Making better name function:")
+    // A better name function to fix middle initials
+    function makeBetterName(firstName, middleName, lastName) {
+      if (middleName.length === 1) {
+     // adding and updating here
+     middleName = middleName + ".";
+   }
+     let fullName = firstName + " " + middleName + " " + lastName;
+     return fullName;
+    }
+    console.log(makeBetterName("Joan", "Marie", "Larkin"));
+    console.log(makeBetterName("John", "F", "Kennedy"));
+
+    //Using else and if else
+    console.log("scoreCompare function");
+  function scoreCompare(home, away) {
+    if (home > away) {
+      return "Home team wins!";
+    } else if (home < away){
+      return "Away team wins :(";
+    } else {
+      return "It was a tie"
+    }
+  }
+  console.log(scoreCompare(5,5));
+  console.log(scoreCompare(5,9));
   </script>
 </body>
 </html>
